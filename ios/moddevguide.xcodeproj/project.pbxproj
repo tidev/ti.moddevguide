@@ -1,0 +1,376 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		24416B8111C4CA220047AFDD /* Build & Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */;
+			buildPhases = (
+				24416B8011C4CA220047AFDD /* ShellScript */,
+			);
+			dependencies = (
+				24416B8511C4CA280047AFDD /* PBXTargetDependency */,
+			);
+			name = "Build & Test";
+			productName = "Build & test";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		24DD6CF91134B3F500162E58 /* TiModdevguideModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* TiModdevguideModule.h */; };
+		24DD6CFA1134B3F500162E58 /* TiModdevguideModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* TiModdevguideModule.m */; };
+		24DE9E1111C5FE74003F90F6 /* TiModdevguideModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* TiModdevguideModuleAssets.h */; };
+		24DE9E1211C5FE74003F90F6 /* TiModdevguideModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* TiModdevguideModuleAssets.m */; };
+		A284015613E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284014A13E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.h */; };
+		A284015713E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284014B13E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.m */; };
+		A284015813E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284014C13E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.h */; };
+		A284015913E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284014D13E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.m */; };
+		A284015A13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284014E13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.h */; };
+		A284015B13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284014F13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m */; };
+		A284015C13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015013E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h */; };
+		A284015D13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015113E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m */; };
+		A284015E13E82F2300AD7C77 /* TiModdevguideViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015213E82F2300AD7C77 /* TiModdevguideViewProxy.h */; };
+		A284015F13E82F2300AD7C77 /* TiModdevguideView.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015313E82F2300AD7C77 /* TiModdevguideView.h */; };
+		A284016013E82F2300AD7C77 /* TiModdevguideView.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015413E82F2300AD7C77 /* TiModdevguideView.m */; };
+		A284016113E82F2300AD7C77 /* TiModdevguideViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015513E82F2300AD7C77 /* TiModdevguideViewProxy.m */; };
+		AA747D9F0F9514B9006C5449 /* TiModuledevguide_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24416B8411C4CA280047AFDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = moduledevguide;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		24DD6CF71134B3F500162E58 /* TiModdevguideModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideModule.h; path = Classes/TiModdevguideModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* TiModdevguideModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideModule.m; path = Classes/TiModdevguideModule.m; sourceTree = "<group>"; };
+		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		24DE9E0F11C5FE74003F90F6 /* TiModdevguideModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideModuleAssets.h; path = Classes/TiModdevguideModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* TiModdevguideModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideModuleAssets.m; path = Classes/TiModdevguideModuleAssets.m; sourceTree = "<group>"; };
+		A284014A13E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideLifeCycleProxy.h; path = Classes/TiModdevguideLifeCycleProxy.h; sourceTree = "<group>"; };
+		A284014B13E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideLifeCycleProxy.m; path = Classes/TiModdevguideLifeCycleProxy.m; sourceTree = "<group>"; };
+		A284014C13E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideKrollDemoProxy.h; path = Classes/TiModdevguideKrollDemoProxy.h; sourceTree = "<group>"; };
+		A284014D13E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideKrollDemoProxy.m; path = Classes/TiModdevguideKrollDemoProxy.m; sourceTree = "<group>"; };
+		A284014E13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideMethodsDemoProxy.h; path = Classes/TiModdevguideMethodsDemoProxy.h; sourceTree = "<group>"; };
+		A284014F13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideMethodsDemoProxy.m; path = Classes/TiModdevguideMethodsDemoProxy.m; sourceTree = "<group>"; };
+		A284015013E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideParametersDemoProxy.h; path = Classes/TiModdevguideParametersDemoProxy.h; sourceTree = "<group>"; };
+		A284015113E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideParametersDemoProxy.m; path = Classes/TiModdevguideParametersDemoProxy.m; sourceTree = "<group>"; };
+		A284015213E82F2300AD7C77 /* TiModdevguideViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideViewProxy.h; path = Classes/TiModdevguideViewProxy.h; sourceTree = "<group>"; };
+		A284015313E82F2300AD7C77 /* TiModdevguideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideView.h; path = Classes/TiModdevguideView.h; sourceTree = "<group>"; };
+		A284015413E82F2300AD7C77 /* TiModdevguideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideView.m; path = Classes/TiModdevguideView.m; sourceTree = "<group>"; };
+		A284015513E82F2300AD7C77 /* TiModdevguideViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideViewProxy.m; path = Classes/TiModdevguideViewProxy.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiModuledevguide_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libTiModuledevguide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTiModuledevguide.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libTiModuledevguide.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* moduledevguide */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = moduledevguide;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				24DD6CF71134B3F500162E58 /* TiModdevguideModule.h */,
+				24DD6CF81134B3F500162E58 /* TiModdevguideModule.m */,
+				24DE9E0F11C5FE74003F90F6 /* TiModdevguideModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* TiModdevguideModuleAssets.m */,
+				A284014C13E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.h */,
+				A284014D13E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.m */,
+				A284014A13E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.h */,
+				A284014B13E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.m */,
+				A284014E13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.h */,
+				A284014F13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m */,
+				A284015013E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h */,
+				A284015113E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m */,
+				A284015313E82F2300AD7C77 /* TiModdevguideView.h */,
+				A284015413E82F2300AD7C77 /* TiModdevguideView.m */,
+				A284015213E82F2300AD7C77 /* TiModdevguideViewProxy.h */,
+				A284015513E82F2300AD7C77 /* TiModdevguideViewProxy.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */,
+				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA747D9F0F9514B9006C5449 /* TiModuledevguide_Prefix.pch in Headers */,
+				24DD6CF91134B3F500162E58 /* TiModdevguideModule.h in Headers */,
+				24DE9E1111C5FE74003F90F6 /* TiModdevguideModuleAssets.h in Headers */,
+				A284015613E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.h in Headers */,
+				A284015813E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.h in Headers */,
+				A284015A13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.h in Headers */,
+				A284015C13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h in Headers */,
+				A284015E13E82F2300AD7C77 /* TiModdevguideViewProxy.h in Headers */,
+				A284015F13E82F2300AD7C77 /* TiModdevguideView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* moddevguide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "moddevguide" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = moddevguide;
+			productName = moduledevguide;
+			productReference = D2AAC07E0554694100DB518D /* libTiModuledevguide.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "moddevguide" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* moduledevguide */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* moddevguide */,
+				24416B8111C4CA220047AFDD /* Build & Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24416B8011C4CA220047AFDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\n\npython \"${TITANIUM_SDK}/titanium.py\" run --dir=\"${PROJECT_DIR}\"\nexit $?\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24DD6CFA1134B3F500162E58 /* TiModdevguideModule.m in Sources */,
+				24DE9E1211C5FE74003F90F6 /* TiModdevguideModuleAssets.m in Sources */,
+				A284015713E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.m in Sources */,
+				A284015913E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.m in Sources */,
+				A284015B13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m in Sources */,
+				A284015D13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m in Sources */,
+				A284016013E82F2300AD7C77 /* TiModdevguideView.m in Sources */,
+				A284016113E82F2300AD7C77 /* TiModdevguideViewProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* moddevguide */;
+			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/TiModuledevguide.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TiModuledevguide_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = TiModuledevguide;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/TiModuledevguide.dst;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TiModuledevguide_Prefix.pch;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = TiModuledevguide;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		24416B8211C4CA220047AFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build & test";
+			};
+			name = Debug;
+		};
+		24416B8311C4CA220047AFDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build & test";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "moddevguide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "moddevguide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24416B8211C4CA220047AFDD /* Debug */,
+				24416B8311C4CA220047AFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
