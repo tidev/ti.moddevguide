@@ -12,6 +12,6 @@ copyright: Copyright (c) 2010-2011 by Appcelerator, Inc.
 # these should not be edited
 name: moddevguide
 moduleid: ti.moddevguide
-guid: 6fe96416-b375-4358-ab0e-65510cc1acbe
-platform: iphone
+guid: 0c7b7522-0e82-4ff2-b456-3ec6ac7948ae
+platform: android
 minsdk: 1.7.3

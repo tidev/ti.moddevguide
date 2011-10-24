@@ -27,6 +27,11 @@
 	return @"ti.moddevguide";
 }
 
+// Constants can be made available to the JavaScript using the following notations
+MAKE_SYSTEM_NUMBER(DEMO_INTEGER,NUMINT(50));
+MAKE_SYSTEM_STR(DEMO_STRING,@"Hello World");
+MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
+
 #pragma mark Lifecycle
 
 -(void)startup

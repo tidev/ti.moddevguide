@@ -5,11 +5,11 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "TiModdevguideViewProxy.h"
+#import "TiModdevguideDemoViewProxy.h"
 
 #import "TiUtils.h"
 
-@implementation TiModdevguideViewProxy
+@implementation TiModdevguideDemoViewProxy
 
 -(id)init
 {

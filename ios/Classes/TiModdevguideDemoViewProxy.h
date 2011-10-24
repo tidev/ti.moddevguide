@@ -5,12 +5,12 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "TiUIView.h"
+#import "TiViewProxy.h"
 
-@interface TiModdevguideView : TiUIView {
-
+@interface TiModdevguideDemoViewProxy : TiViewProxy {
+	
 @private
-	UIView *square;
+	
 }
 
 @end

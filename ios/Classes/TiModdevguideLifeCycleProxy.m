@@ -95,5 +95,9 @@ static int nextProxyId = 1;
 	[super _initWithProperties:properties];
 }
 
+-(void)close:(id)args
+{
+    // Provide for API parity with Android 
+}
 
 @end

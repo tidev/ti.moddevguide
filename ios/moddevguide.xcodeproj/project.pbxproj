@@ -34,10 +34,10 @@
 		A284015B13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284014F13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m */; };
 		A284015C13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015013E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h */; };
 		A284015D13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015113E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m */; };
-		A284015E13E82F2300AD7C77 /* TiModdevguideViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015213E82F2300AD7C77 /* TiModdevguideViewProxy.h */; };
-		A284015F13E82F2300AD7C77 /* TiModdevguideView.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015313E82F2300AD7C77 /* TiModdevguideView.h */; };
-		A284016013E82F2300AD7C77 /* TiModdevguideView.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015413E82F2300AD7C77 /* TiModdevguideView.m */; };
-		A284016113E82F2300AD7C77 /* TiModdevguideViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015513E82F2300AD7C77 /* TiModdevguideViewProxy.m */; };
+		A284015E13E82F2300AD7C77 /* TiModdevguideDemoViewProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015213E82F2300AD7C77 /* TiModdevguideDemoViewProxy.h */; };
+		A284015F13E82F2300AD7C77 /* TiModdevguideDemoView.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015313E82F2300AD7C77 /* TiModdevguideDemoView.h */; };
+		A284016013E82F2300AD7C77 /* TiModdevguideDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015413E82F2300AD7C77 /* TiModdevguideDemoView.m */; };
+		A284016113E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015513E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m */; };
 		AA747D9F0F9514B9006C5449 /* TiModuledevguide_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -66,10 +66,10 @@
 		A284014F13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideMethodsDemoProxy.m; path = Classes/TiModdevguideMethodsDemoProxy.m; sourceTree = "<group>"; };
 		A284015013E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideParametersDemoProxy.h; path = Classes/TiModdevguideParametersDemoProxy.h; sourceTree = "<group>"; };
 		A284015113E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideParametersDemoProxy.m; path = Classes/TiModdevguideParametersDemoProxy.m; sourceTree = "<group>"; };
-		A284015213E82F2300AD7C77 /* TiModdevguideViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideViewProxy.h; path = Classes/TiModdevguideViewProxy.h; sourceTree = "<group>"; };
-		A284015313E82F2300AD7C77 /* TiModdevguideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideView.h; path = Classes/TiModdevguideView.h; sourceTree = "<group>"; };
-		A284015413E82F2300AD7C77 /* TiModdevguideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideView.m; path = Classes/TiModdevguideView.m; sourceTree = "<group>"; };
-		A284015513E82F2300AD7C77 /* TiModdevguideViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideViewProxy.m; path = Classes/TiModdevguideViewProxy.m; sourceTree = "<group>"; };
+		A284015213E82F2300AD7C77 /* TiModdevguideDemoViewProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideDemoViewProxy.h; path = Classes/TiModdevguideDemoViewProxy.h; sourceTree = "<group>"; };
+		A284015313E82F2300AD7C77 /* TiModdevguideDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideDemoView.h; path = Classes/TiModdevguideDemoView.h; sourceTree = "<group>"; };
+		A284015413E82F2300AD7C77 /* TiModdevguideDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideDemoView.m; path = Classes/TiModdevguideDemoView.m; sourceTree = "<group>"; };
+		A284015513E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideDemoViewProxy.m; path = Classes/TiModdevguideDemoViewProxy.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiModuledevguide_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libTiModuledevguide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTiModuledevguide.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,10 +129,10 @@
 				A284014F13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m */,
 				A284015013E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h */,
 				A284015113E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m */,
-				A284015313E82F2300AD7C77 /* TiModdevguideView.h */,
-				A284015413E82F2300AD7C77 /* TiModdevguideView.m */,
-				A284015213E82F2300AD7C77 /* TiModdevguideViewProxy.h */,
-				A284015513E82F2300AD7C77 /* TiModdevguideViewProxy.m */,
+				A284015313E82F2300AD7C77 /* TiModdevguideDemoView.h */,
+				A284015413E82F2300AD7C77 /* TiModdevguideDemoView.m */,
+				A284015213E82F2300AD7C77 /* TiModdevguideDemoViewProxy.h */,
+				A284015513E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -160,8 +160,8 @@
 				A284015813E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.h in Headers */,
 				A284015A13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.h in Headers */,
 				A284015C13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.h in Headers */,
-				A284015E13E82F2300AD7C77 /* TiModdevguideViewProxy.h in Headers */,
-				A284015F13E82F2300AD7C77 /* TiModdevguideView.h in Headers */,
+				A284015E13E82F2300AD7C77 /* TiModdevguideDemoViewProxy.h in Headers */,
+				A284015F13E82F2300AD7C77 /* TiModdevguideDemoView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +238,8 @@
 				A284015913E82F2300AD7C77 /* TiModdevguideKrollDemoProxy.m in Sources */,
 				A284015B13E82F2300AD7C77 /* TiModdevguideMethodsDemoProxy.m in Sources */,
 				A284015D13E82F2300AD7C77 /* TiModdevguideParametersDemoProxy.m in Sources */,
-				A284016013E82F2300AD7C77 /* TiModdevguideView.m in Sources */,
-				A284016113E82F2300AD7C77 /* TiModdevguideViewProxy.m in Sources */,
+				A284016013E82F2300AD7C77 /* TiModdevguideDemoView.m in Sources */,
+				A284016113E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

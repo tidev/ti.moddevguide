@@ -172,7 +172,7 @@
 -(NSArray*) demoMethodArray:(id)args
 {
 	// This method is an example of exposing a native method that accepts a
-	// dynamic list of arguments returns an NSArray object.
+	// dynamic list of arguments and returns an NSArray object.
 	// Arguments from JavaScript are passed to the native methods as an NSArray
 	
 	// The ENSURE_TYPE_OR_NILL macro will confirm that if an argument is passed
@@ -356,6 +356,43 @@
 	// Use the TiUtils methods to get the values from the arguments
 	TiColor *result = [TiUtils colorValue:args];
 	
+	NSLog(@"[METHODSDEMO] %@", result);
+	
+	return result;
+}
+
+-(NSString*) demoMethodOptionalArgs:(id)args
+{
+	// This method is an example of exposing a native method that accepts 1 or 2
+	// arguments (2 string values) and returns a string.
+	// Arguments from JavaScript are passed to the native methods as an NSArray
+	
+	enum Args {
+		kArgGreeting = 0,
+        kArgCount,
+        kArgName = kArgCount        // Optional
+	};
+	
+	// The ENSURE_TYPE macro will confirm that if an argument is passed
+	// it is of the specified type
+    ENSURE_TYPE(args,NSArray);
+	
+	// Validate correct number of arguments
+	ENSURE_ARG_COUNT(args, kArgCount);
+
+	NSLog(@"[METHODSDEMO] demoMethodOptionalArgs received %d arguments", [args count]);
+	
+	// Use the TiUtils methods to get the values from the arguments
+	NSString *greeting = [TiUtils stringValue:[args objectAtIndex:kArgGreeting]];
+    NSString *name = ([args count] > kArgName) ? [TiUtils stringValue:[args objectAtIndex:kArgName]] : nil;
+      
+    NSString *result;
+    if (name == nil) {
+        result = [NSString stringWithFormat:@"%@!!", greeting];
+    } else {
+        result = [NSString stringWithFormat:@"%@, %@!", greeting, name];
+    }
+
 	NSLog(@"[METHODSDEMO] %@", result);
 	
 	return result;

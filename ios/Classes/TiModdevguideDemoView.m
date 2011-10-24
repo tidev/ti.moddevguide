@@ -5,11 +5,11 @@
  * Please see the LICENSE included with this distribution for details.
  */
 
-#import "TiModdevguideView.h"
+#import "TiModdevguideDemoView.h"
 
 #import "TiUtils.h"
 
-@implementation TiModdevguideView
+@implementation TiModdevguideDemoView
 
 -(void)dealloc
 {
@@ -69,7 +69,7 @@
 	// The event listeners for a view are actually attached to the view proxy.
 	// You must reference 'self.proxy' to get the proxy for this view
 	
-	// If is a good idea to check if there are listeners for the event that
+	// It is a good idea to check if there are listeners for the event that
 	// is about to fired. There could be zero or multiple listeners for the
 	// specified event.
 	if ([self.proxy _hasListeners:@"colorChange"]) {

@@ -104,7 +104,7 @@
 	
 	NSLog(@"[KROLLDEMO] signalEvent called");
 	
-	// If is a good idea to check if there are listeners for the event that
+	// It is a good idea to check if there are listeners for the event that
 	// is about to fired. There could be zero or multiple listeners for the
 	// specified event.
 	if ([self _hasListeners:@"demoEvent"]) {
@@ -122,8 +122,6 @@
 
 -(void)callThisCallbackDirectly:(id)args
 {
-	ENSURE_UI_THREAD(callThisCallbackDirectly,args);
-	
 	// This macro ensures that there is only one argument and that the argument
 	// is of type NSDictionary. It also has the side-effect of re-assigning the
 	// 'args' variable to the NSDictionary object.
@@ -169,7 +167,7 @@
 	}
 	
 	// If you implement a setter, you should also manually store the property yourself in
-	// the dynprops for the proxy. This is done by calling the 'replaceValu' method.
+	// the dynprops for the proxy. This is done by calling the 'replaceValue' method.
 	[self replaceValue:value forKey:@"watchPropertyChanges" notification:NO];
 }
 
