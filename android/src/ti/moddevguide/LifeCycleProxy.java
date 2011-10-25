@@ -45,7 +45,7 @@ public class LifeCycleProxy extends KrollProxy
 	@Override
 	public void handleCreationDict(KrollDict options) 
 	{
-		// This method is called from handleCreationArgs if there is at least
+		// This method is called from handleCreationArgs if there is at least one
 		// argument specified for the proxy creation call and the first argument
 		// is a KrollDict object.
 		
@@ -70,6 +70,7 @@ public class LifeCycleProxy extends KrollProxy
 			Log.d(LCAT, "PROXY LIFECYCLE EVENT] args[" + i + "] " + args[i]);
 		}
 
+		// Calling the superclass method is required
 		super.handleCreationArgs(createdInModule, args);
 	}
 

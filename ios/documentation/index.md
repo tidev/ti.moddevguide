@@ -56,7 +56,11 @@ See example.
 
 ## Author
 
-Jeff English <jenglish@appcelerator.com>, Appcelerator Inc.
+Jeff English
+
+## Feedback and Support
+
+Please direct all questions, feedback, and concerns to [info@appcelerator.com](mailto:info@appcelerator.com?subject=iOS%20moddevguide%20Module).
 
 ## License
 
