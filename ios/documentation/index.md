@@ -10,7 +10,7 @@ This is a companion module to the Titanium [Module Developer Guide for iOS](http
 
 To access this module from JavaScript, you would do the following:
 
-<pre>Ti.devGuide = require("ti.moddevguide");</pre>
+<pre>var DevGuide = require('ti.moddevguide');</pre>
 
 ## Topics Covered
 
