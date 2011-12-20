@@ -54,6 +54,10 @@ Demonstrates how to access both module and application assets from a module.
 
 See example.
 
+## Module History
+
+View the [change log](changelog.html) for this module.
+
 ## Author
 
 Jeff English
