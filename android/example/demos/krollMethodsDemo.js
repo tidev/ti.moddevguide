@@ -21,7 +21,7 @@ function handlePickerSelection(e) {
 				result = methodsDemo.demoMethodString('Joe', 'Smith', 25);
 				break;
 			case 'dictionary':
-				result = methodsDemo.demoMethodDictionary(['a', 'b', 'c', 'd', 'e', 'f']);
+                result = JSON.stringify(methodsDemo.demoMethodDictionary(['a', 'b', 'c', 'd', 'e', 'f']));
 				Ti.API.info('Dictionary Result:');
 				Ti.API.info(result);
 				break;
