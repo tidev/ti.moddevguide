@@ -4,5 +4,5 @@ titanium.version=1.8.0.1
 android.sdk=/usr/android-sdk
 
 titanium.platform=${titanium.sdk}/mobilesdk/${titanium.os}/${titanium.version}/android
-android.platform=${android.sdk}/platforms/android-7
-google.apis=${android.sdk}/add-ons/addon_google_apis_google_inc_7
+android.platform=${android.sdk}/platforms/android-8
+google.apis=${android.sdk}/add-ons/addon_google_apis_google_inc_8
