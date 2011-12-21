@@ -246,7 +246,7 @@ public class KrollDemoProxy extends LifeCycleProxy
 		// is about to fired. There could be zero or multiple listeners for the
 		// specified event.
 		if (hasListeners("propertyChange")) {
-			KrollDict event = new KrollDict();
+			HashMap<String, Object> event = new HashMap<String, Object>();
 			event.put("property", key);
 			event.put("oldValue",oldValue);
 			event.put("newValue",newValue);

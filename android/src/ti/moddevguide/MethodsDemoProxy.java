@@ -40,15 +40,11 @@ public class MethodsDemoProxy extends LifeCycleProxy
 	// The methods are exposed to javascript because of the @Kroll.method annotation.
 	// Method signatures can be specified with the following properties:
 	//
-	// 1. The first argument can be specified as a KrollInvocation argument. Specify
-	//    this in the method signature when the method requires access to the calling
-	//    context.
-	//      public void myMethod(KrollInvocation invocation, <args>);
-	// 2. The arguments can be declared as an Object[]. Specify this in the method
+	// 1. The arguments can be declared as an Object[]. Specify this in the method
 	//    signature to handle a variable number of arguments or to support manual 
 	//    type conversion of arguments.
 	//      public void myMethod(KrollInvocation invocation, Object[] args);
-	// 3. The arguments can be declared with explicit types. Specify this in the
+	// 2. The arguments can be declared with explicit types. Specify this in the
 	//    method signature to have Kroll attempt to call with an exact match of
 	//    the parameter types.
 	//      public void myMethod(KrollInvocation invocation, int firstArg, KrollDict secondArg);
