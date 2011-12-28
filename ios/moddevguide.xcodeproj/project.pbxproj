@@ -38,7 +38,7 @@
 		A284015F13E82F2300AD7C77 /* TiModdevguideDemoView.h in Headers */ = {isa = PBXBuildFile; fileRef = A284015313E82F2300AD7C77 /* TiModdevguideDemoView.h */; };
 		A284016013E82F2300AD7C77 /* TiModdevguideDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015413E82F2300AD7C77 /* TiModdevguideDemoView.m */; };
 		A284016113E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = A284015513E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m */; };
-		AA747D9F0F9514B9006C5449 /* TiModuledevguide_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */; };
+		AA747D9F0F9514B9006C5449 /* TiModdevguide_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* TiModdevguide_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = moduledevguide;
+			remoteInfo = moddevguide;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -70,9 +70,9 @@
 		A284015313E82F2300AD7C77 /* TiModdevguideDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TiModdevguideDemoView.h; path = Classes/TiModdevguideDemoView.h; sourceTree = "<group>"; };
 		A284015413E82F2300AD7C77 /* TiModdevguideDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideDemoView.m; path = Classes/TiModdevguideDemoView.m; sourceTree = "<group>"; };
 		A284015513E82F2300AD7C77 /* TiModdevguideDemoViewProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TiModdevguideDemoViewProxy.m; path = Classes/TiModdevguideDemoViewProxy.m; sourceTree = "<group>"; };
-		AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiModuledevguide_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AA747D9E0F9514B9006C5449 /* TiModdevguide_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiModdevguide_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		D2AAC07E0554694100DB518D /* libTiModuledevguide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTiModuledevguide.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2AAC07E0554694100DB518D /* libTiModdevguide.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTiModdevguide.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +90,12 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2AAC07E0554694100DB518D /* libTiModuledevguide.a */,
+				D2AAC07E0554694100DB518D /* libTiModdevguide.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* moduledevguide */ = {
+		0867D691FE84028FC02AAC07 /* moddevguide */ = {
 			isa = PBXGroup;
 			children = (
 				08FB77AEFE84172EC02AAC07 /* Classes */,
@@ -103,7 +103,7 @@
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = moduledevguide;
+			name = moddevguide;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
@@ -140,7 +140,7 @@
 		32C88DFF0371C24200C91783 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				AA747D9E0F9514B9006C5449 /* TiModuledevguide_Prefix.pch */,
+				AA747D9E0F9514B9006C5449 /* TiModdevguide_Prefix.pch */,
 				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
 			);
 			name = "Other Sources";
@@ -153,7 +153,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA747D9F0F9514B9006C5449 /* TiModuledevguide_Prefix.pch in Headers */,
+				AA747D9F0F9514B9006C5449 /* TiModdevguide_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* TiModdevguideModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* TiModdevguideModuleAssets.h in Headers */,
 				A284015613E82F2300AD7C77 /* TiModdevguideLifeCycleProxy.h in Headers */,
@@ -181,8 +181,8 @@
 			dependencies = (
 			);
 			name = moddevguide;
-			productName = moduledevguide;
-			productReference = D2AAC07E0554694100DB518D /* libTiModuledevguide.a */;
+			productName = moddevguide;
+			productReference = D2AAC07E0554694100DB518D /* libTiModdevguide.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -200,7 +200,7 @@
 				French,
 				German,
 			);
-			mainGroup = 0867D691FE84028FC02AAC07 /* moduledevguide */;
+			mainGroup = 0867D691FE84028FC02AAC07 /* moddevguide */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,15 +269,15 @@
                 );
                 "ARCHS[sdk=iphonesimulator*]" = i386;
 				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/TiModuledevguide.dst;
+				DSTROOT = /tmp/TiModdevguide.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TiModuledevguide_Prefix.pch;
+				GCC_PREFIX_HEADER = TiModdevguide_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = TiModuledevguide;
+				PRODUCT_NAME = TiModdevguide;
 			};
 			name = Debug;
 		};
@@ -295,12 +295,12 @@
                  	 armv7,
                 );
                 "ARCHS[sdk=iphonesimulator*]" = i386;
-				DSTROOT = /tmp/TiModuledevguide.dst;
+				DSTROOT = /tmp/TiModdevguide.dst;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = TiModuledevguide_Prefix.pch;
+				GCC_PREFIX_HEADER = TiModdevguide_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				PRODUCT_NAME = TiModuledevguide;
+				PRODUCT_NAME = TiModdevguide;
 			};
 			name = Release;
 		};
