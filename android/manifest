@@ -15,4 +15,4 @@ name: moddevguide
 moduleid: ti.moddevguide
 guid: 0c7b7522-0e82-4ff2-b456-3ec6ac7948ae
 platform: android
-minsdk: 1.7.3
+minsdk: 1.8.0.1
