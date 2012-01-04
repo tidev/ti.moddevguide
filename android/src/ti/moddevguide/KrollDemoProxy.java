@@ -236,9 +236,14 @@ public class KrollDemoProxy extends LifeCycleProxy
 	@Override
 	public void propertyChanged(String key, Object oldValue, Object newValue, KrollProxy proxy) 
 	{
-		// If the 'modelListener' property has been set for this proxy then this method is called
-		// whenever a proxy property value is updated. Note that this method is only called if the
-		// new value is different than the current value.
+        // If the 'modelListener' property has been set for this proxy then this method is called
+        // whenever a proxy property value is updated. Note that this method is called whenever the
+        // setter is called, so it will get called even if the value of the property has not changed.
+
+        if ((oldValue == newValue) ||
+            ((oldValue != null) && oldValue.equals(newValue))) {
+            return;
+        }
 
 		Log.d(LCAT, "[KROLLDEMO] Property " + key + "changed from " + oldValue + " to " + newValue);
 		
