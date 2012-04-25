@@ -77,8 +77,8 @@ exports.create = function(win) {
 		right:10,
 		left:10,
 		color:'black',
-		width:'auto',
-		height:'auto'
+		width:Ti.UI.SIZE || 'auto',
+		height:Ti.UI.SIZE || 'auto'
 	}));
 
 	var toggleBtn = Ti.UI.createButton({

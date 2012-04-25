@@ -49,8 +49,8 @@ exports.create = function(win) {
 		right:10,
 		left:10,
 		color:'black',
-		width:'auto',
-		height:'auto'
+		width:Ti.UI.SIZE || 'auto',
+		height:Ti.UI.SIZE || 'auto'
 	}));
 	
 	var view1 = Ti.UI.createView({
@@ -66,8 +66,8 @@ exports.create = function(win) {
 		textAlign:'left',
 		font:{ fontsize: 12 },
 		color:'black',
-		width:'auto',
-		height:'auto',
+		width:Ti.UI.SIZE || 'auto',
+		height:Ti.UI.SIZE || 'auto',
 		top:4
 	}));
 	
@@ -91,8 +91,8 @@ exports.create = function(win) {
 		textAlign:'left',
 		font:{ fontsize: 12 },
 		color:'black',
-		width:'auto',
-		height:'auto',
+		width:Ti.UI.SIZE || 'auto',
+		height:Ti.UI.SIZE || 'auto',
 		top:4
 	}));
 	

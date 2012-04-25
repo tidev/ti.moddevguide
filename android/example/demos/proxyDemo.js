@@ -53,15 +53,15 @@ exports.create = function(win) {
 		right:10,
 		left:10,
 		color:'black',
-		width:'auto',
-		height:'auto'
+		width:Ti.UI.SIZE || 'auto',
+		height:Ti.UI.SIZE || 'auto'
 	}));
 
 	proxyCountLbl = Ti.UI.createLabel({
 		text: '',
 		top: 10,
-		height: 'auto',
-		width: 'auto',
+		height: Ti.UI.SIZE || 'auto',
+		width: Ti.UI.SIZE || 'auto',
 		textAlign: 'left',
 		color: 'black',
 		font: { fontSize: 12 }

@@ -22,8 +22,8 @@ exports.create = function(win) {
 		right:10,
 		left:10,
 		color:'black',
-		width:'auto',
-		height:'auto'
+		width:Ti.UI.SIZE || 'auto',
+		height:Ti.UI.SIZE || 'auto'
 	}));
 
 	// Declare list of values to display. Each item references a constant defined
@@ -49,7 +49,7 @@ exports.create = function(win) {
 			textAlign:'left',
 			font:{ fontsize: 12, fontWeight: 'bold' },
 			color:'black',
-			width:'auto',
+			width:Ti.UI.SIZE || 'auto',
 			height:30
 		}));
 
@@ -58,7 +58,7 @@ exports.create = function(win) {
 			textAlign:'left',
 			font:{ fontsize: 12 },
 			color:'black',
-			width:'auto',
+			width:Ti.UI.SIZE || 'auto',
 			height:30
 		}));
 	
