@@ -108,10 +108,10 @@ public class KrollDemoProxy extends LifeCycleProxy
 		
 		// The 'callSync' method of the KrollCallback object can be used to directly 
 		// call the associated JavaScript function and get a return value.
-		Log.e(LCAT,"[KROLLDEMO] requestDataWithCallback will not work with 1.8.0.1 until 1.8.1 is released! See TIMOB-6789.");
-		//Object result = requestDataCallback.callSync(invocation, null);
-		
-		//Log.d(LCAT,"[KROLLDEMO] requestData callback returned " + result);
+		HashMap<String, String> event = new HashMap<String, String>();
+		Object result = requestDataCallback.call(getKrollObject(), event);
+
+		Log.d(LCAT,"[KROLLDEMO] requestData callback returned " + result);
 	}
 	
 	@Kroll.method
