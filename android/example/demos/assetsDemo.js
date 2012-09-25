@@ -4,14 +4,14 @@ var devGuide = null;
 var	imageView = null;
 
 function handleLoadModuleImage(e) {
-	var image = devGuide.loadImageFromModule('moduleimage.png');
+	var image = devGuide.loadImageFromModule('module_image.png');
 	if (image != null) {
 		imageView.image = image;		
 	}	
 }
 
 function handleLoadAppImage(e) {
-	var image = devGuide.loadImageFromApplication('applicationimage.png');
+	var image = devGuide.loadImageFromApplication('application_image.png');
 	if (image != null) {
 		imageView.image = image;
 	}			
