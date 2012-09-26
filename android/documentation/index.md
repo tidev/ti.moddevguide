@@ -68,4 +68,4 @@ Please direct all questions, feedback, and concerns to [info@appcelerator.com](m
 
 ## License
 
-Copyright(c) 2010-2011 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.
+Copyright(c) 2010-2012 by Appcelerator, Inc. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.
