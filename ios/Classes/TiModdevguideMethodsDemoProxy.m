@@ -9,7 +9,6 @@
 #import "TiUtils.h"
 #import "tiRect.h"
 #import "tiPoint.h"
-#import "tiRange.h"
 #import "tiBlob.h"
 
 @implementation TiModdevguideMethodsDemoProxy
@@ -315,10 +314,10 @@
 }
 
 
--(TiRange*) demoMethodRange:(id)args
+-(NSDictionary*) demoMethodRange:(id)args
 {
 	// This method is an example of exposing a native method that accepts 2
-	// integer values as arguments and returns a TiRange object.
+	// integer values as arguments and returns a TiRange like object.
 	// Arguments from JavaScript are passed to the native methods as an NSArray
 	
 	enum Args {
@@ -337,7 +336,10 @@
 	range.location = [TiUtils intValue:[args objectAtIndex:kArgLocation]];
 	range.length = [TiUtils intValue:[args objectAtIndex:kArgLength]];
 	
-	TiRange *result = [[[TiRange alloc] initWithRange:range] autorelease];
+	// TiRange has been removed from the sdk as of version 2.1.0
+	// Instead of using TiRange, this method just returns a TiRange like dictionary.
+	NSDictionary* result = [NSDictionary dictionaryWithObjectsAndKeys:NUMINT(range.location),@"location", 								 
+		NUMINT(range.length),@"length", nil];
 	
 	NSLog(@"[METHODSDEMO] %@", result);
 	
