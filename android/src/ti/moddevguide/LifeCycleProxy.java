@@ -12,7 +12,6 @@ import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.KrollModule;
 import org.appcelerator.kroll.KrollProxy;
-import org.appcelerator.titanium.TiContext.OnLifecycleEvent;
 import org.appcelerator.kroll.common.Log;
 
 import android.app.Activity;
@@ -21,7 +20,6 @@ import android.app.Activity;
 
 @Kroll.proxy(creatableInModule = ModdevguideModule.class)
 public class LifeCycleProxy extends KrollProxy 
-	implements OnLifecycleEvent
 {
 	// Standard Debugging variables
 	private static final String LCAT = "ModdevguideModule";
@@ -33,11 +31,6 @@ public class LifeCycleProxy extends KrollProxy
 	public LifeCycleProxy() 
 	{
 		super();
-		
-		// A proxy can receive lifecycle events for the current context.
-		// Note that these events are for the context and not the proxy itself.
-		// You do not need to register for these events; your proxy will receive them
-		// if overridden.
 		
 		// Generate a unique identifier so the user can see which proxy
 		// instance is being created or destroyed (for demonstration purposes only).
@@ -80,49 +73,6 @@ public class LifeCycleProxy extends KrollProxy
 		super.handleCreationArgs(createdInModule, args);
 	}
 
-	// Context Lifecycle events
-
-	@Override
-	public void onStart(Activity activity) 
-	{
-		// This method is called when the module is loaded and the root context is started
-
-		Log.d(LCAT, "[PROXY CONTEXT LIFECYCLE EVENT] start proxy with id " + getProxyId());
-	}
-	
-	@Override
-	public void onStop(Activity activity) 
-	{
-		// This method is called when the root context is stopped 
-
-		Log.d(LCAT, "[PROXY CONTEXT LIFECYCLE EVENT] stop proxy with id " + getProxyId());
-	}
-	
-	@Override
-	public void onPause(Activity activity) 
-	{
-		// This method is called when the root context is being suspended
-
-		Log.d(LCAT, "[PROXY CONTEXT LIFECYCLE EVENT] pause proxy with id " + getProxyId());
-	}
-
-	@Override
-	public void onResume(Activity activity) 
-	{		
-		// This method is called when the root context is being resumed
-
-		Log.d(LCAT, "[PROXY CONTEXT LIFECYCLE EVENT] resume proxy with id " + getProxyId());	
-	}
-
-	
-	@Override
-	public void onDestroy(Activity activity) 
-	{
-		// This method is called when the root context is being destroyed
-
-		Log.d(LCAT, "[PROXY CONTEXT LIFECYCLE EVENT] destroy proxy with id " + getProxyId());
-	}
-
 	// Public APIs (available in javascript)
 	
 	// The methods are exposed to javascript because of the @Kroll.method annotation
@@ -130,7 +80,7 @@ public class LifeCycleProxy extends KrollProxy
 	@Kroll.method
 	public void close() 
 	{
-		Log.d(LCAT, "[PROXY CONTEXT LIFECYCLE EVENT] close called");
+		Log.d(LCAT, "[PROXY LIFECYCLE EVENT] close called");
 	}
 	
 }
