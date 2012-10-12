@@ -4,7 +4,7 @@
 
 Demonstrates various aspects of Android module development in Titanium.
 
-This is a companion module to the Titanium [Module Developer Guide for Android](http://wiki.appcelerator.org/display/guides/Module+Developer+Guide+for+Android)
+This is a companion module to the Titanium [Android Module Development Guide](http://wiki.appcelerator.org/display/guides2/Android+Module+Development+Guide)
 
 ## Accessing the Ti.moddevguide Module
 
