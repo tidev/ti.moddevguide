@@ -26,6 +26,10 @@ public class LifeCycleProxy extends KrollProxy
 	// Standard Debugging variables
 	private static final String LCAT = "ModdevguideModule";
 	
+	// Unique Identifier variables
+	private static int nextProxyId = 1;
+	private int proxyId = 0;
+	
 	public LifeCycleProxy() 
 	{
 		super();
@@ -35,8 +39,12 @@ public class LifeCycleProxy extends KrollProxy
 		// You do not need to register for these events; your proxy will receive them
 		// if overridden.
 		
+		// Generate a unique identifier so the user can see which proxy
+		// instance is being created or destroyed (for demonstration purposes only).
+		proxyId = nextProxyId++;
+		
 		// Each KrollProxy object has a unique proxy id
-		Log.i(LCAT, "[PROXY LIFECYCLE EVENT] init with proxy id of " + getProxyId());
+		Log.i(LCAT, "[PROXY LIFECYCLE EVENT] init with proxy id of " + proxyId);
 	}
 	
 	// Handle creation options
