@@ -2,10 +2,10 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.1
+version: 2.1.0
 apiversion: 2
 description: Titanium Module Development Guide
-author: Jeff English
+author: Jeff English & Jon Alter
 license: Appcelerator Commercial License
 copyright: Copyright (c) 2010-2012 by Appcelerator, Inc.
 
@@ -15,4 +15,4 @@ name: moddevguide
 moduleid: ti.moddevguide
 guid: 6fe96416-b375-4358-ab0e-65510cc1acbe
 platform: iphone
-minsdk: 1.7.3
+minsdk: 1.8.1

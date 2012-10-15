@@ -2,10 +2,10 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 2.0.1
+version: 2.1.0
 apiversion: 2
 description: Titanium Module Development Guide
-author: Jeff English
+author: Jeff English & Jon Alter
 license: Appcelerator Commercial License
 copyright: Copyright (c) 2010-2012 by Appcelerator, Inc.
 
