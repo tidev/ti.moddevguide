@@ -131,7 +131,6 @@ exports.create = function(win) {
 	});
 	picker.add(data);
 	picker.selectionIndicator = true;
-	picker.setSelectedRow(0,-1,false);
 
 	picker.addEventListener('change', handlePickerSelection);
 	

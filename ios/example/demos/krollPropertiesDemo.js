@@ -56,7 +56,7 @@ exports.create = function(win) {
 	var view1 = Ti.UI.createView({
 		layout:'horizontal',
 		width:'100%',
-		height:'30',
+		height:Ti.UI.SIZE || 'auto',
 		top:10,
 		left:10
 	});
@@ -67,8 +67,7 @@ exports.create = function(win) {
 		font:{ fontsize: 12 },
 		color:'black',
 		width:Ti.UI.SIZE || 'auto',
-		height:Ti.UI.SIZE || 'auto',
-		top:4
+		height:Ti.UI.SIZE || 'auto'
 	}));
 	
 	var switchPropertyChanges = Ti.UI.createSwitch({
@@ -81,7 +80,7 @@ exports.create = function(win) {
 	var view2= Ti.UI.createView({
 		layout:'horizontal',
 		width:'100%',
-		height:'30',
+		height:Ti.UI.SIZE || 'auto',
 		top:20,
 		left:10
 	})
@@ -92,8 +91,7 @@ exports.create = function(win) {
 		font:{ fontsize: 12 },
 		color:'black',
 		width:Ti.UI.SIZE || 'auto',
-		height:Ti.UI.SIZE || 'auto',
-		top:4
+		height:Ti.UI.SIZE || 'auto'
 	}));
 	
 	var valueField = Ti.UI.createTextField({
@@ -101,7 +99,7 @@ exports.create = function(win) {
 		font:{ fontsize: 12 },
 		color:'black',
 		width:200,
-		height:35,
+		height:Ti.UI.SIZE || 'auto',
 		left:10,
 		borderStyle: Ti.UI.INPUT_BORDERSTYLE_ROUNDED
 	});
@@ -110,14 +108,14 @@ exports.create = function(win) {
 	var valueBtn = Ti.UI.createButton({
 		title:'Get Value',
 		width:200,
-		height:40,
+		height:Ti.UI.SIZE || 'auto',
 		top:20
 	});
 	
 	var batchUpdateBtn = Ti.UI.createButton({
 		title:'Update Multiple Properties',
 		width:200,
-		height:40,
+		height:Ti.UI.SIZE || 'auto',
 		top:20
 	});
 	

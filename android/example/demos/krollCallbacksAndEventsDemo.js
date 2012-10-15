@@ -105,35 +105,35 @@ exports.create = function(win) {
 	var btn1 = Ti.UI.createButton({
 		title:'Success Event',
 		width:200,
-		height:40,
+		height:Ti.UI.SIZE || 'auto',
 		top:20
 	});
 	
 	var btn2 = Ti.UI.createButton({
 		title:'Cancel Event',
 		width:200,
-		height:40,
+		height:Ti.UI.SIZE || 'auto',
 		top:20
 	});
 
 	var btn3 = Ti.UI.createButton({
 		title:'Direct Callback',
 		width:200,
-		height:40,
+		height:Ti.UI.SIZE || 'auto',
 		top:20
 	});
 
 	var btn4 = Ti.UI.createButton({
 		title:'Demo Event',
 		width:200,
-		height:40,
+		height:Ti.UI.SIZE || 'auto',
 		top:20
 	});
 
 	var btn5 = Ti.UI.createButton({
 		title:'Request Data',
 		width:200,
-		height:40,
+		height:Ti.UI.SIZE || 'auto',
 		top:20
 	});
 
