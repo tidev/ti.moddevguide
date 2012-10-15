@@ -245,7 +245,7 @@ public class KrollDemoProxy extends LifeCycleProxy
             return;
         }
 
-		Log.d(LCAT, "[KROLLDEMO] Property " + key + "changed from " + oldValue + " to " + newValue);
+		Log.d(LCAT, "[KROLLDEMO] Property " + key + " changed from " + oldValue + " to " + newValue);
 		
 		// If is a good idea to check if there are listeners for the event that
 		// is about to fired. There could be zero or multiple listeners for the
