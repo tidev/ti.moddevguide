@@ -15,7 +15,10 @@ import java.util.HashMap;
 import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.titanium.TiBlob;
+import org.appcelerator.titanium.TiFileProxy;
 import org.appcelerator.kroll.common.Log;
+import org.appcelerator.titanium.io.TiBaseFile;
+import org.appcelerator.titanium.io.TiFileFactory;
 import org.appcelerator.titanium.util.TiConvert;
 
 import ti.modules.titanium.filesystem.FileProxy;
@@ -240,14 +243,15 @@ public class MethodsDemoProxy extends LifeCycleProxy
 	}
 	
 	@Kroll.method
-	public FileProxy demoMethodFile(String arg)
+	public TiFileProxy demoMethodFile(String arg)
 	{
 		// This method is an example of exposing a native method that accepts a
 		// single string argument and returns a TiFile object.
 
 		Log.d(LCAT,"[METHODSDEMO] demoMethodFile received 1 argument of type String");
 		
-		FileProxy result = new FileProxy(getTiContext(), new String[] { arg } );
+		TiBaseFile file = TiFileFactory.createTitaniumFile(arg, false);
+		TiFileProxy result = new TiFileProxy(file);
 		
 		Log.d(LCAT,"[METHODSDEMO] Path: " + result.getNativePath() + " Size: " + result.getSize());
 		

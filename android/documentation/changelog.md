@@ -1,5 +1,7 @@
 # Change Log
 <pre>
+v2.1.1  [TIMODOPEN-211] Removing TiContext because it is deprecated
+	
 v2.1.0  [MOD-878] Updated to latest TiSDK module api v2
 	
 v2.0.1  [MOD-637] Re-enabled requestDataWithCallback example functionality
