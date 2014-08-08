@@ -1,11 +1,11 @@
 language: objective-c
 env:
 global:
-   - MODULE_NAME=ti.moddevguide
+    - "MODULE_NAME=ti.moddevguide"
 before_install:
-    - MODULE_ROOT=/Users/mdadu/documents/Git/ti.moddevguide
+    - MODULE_ROOT=$PWD
 install:
-    - cd 
+    - cd $MODULE_ROOT
     - curl -o install.sh https://raw.githubusercontent.com/appcelerator-modules/ci/master/travis/install.sh
     - source install.sh -s 3.2.2.GA
 script: 
