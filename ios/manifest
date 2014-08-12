@@ -15,4 +15,4 @@ name: moddevguide
 moduleid: ti.moddevguide
 guid: 6fe96416-b375-4358-ab0e-65510cc1acbe
 platform: iphone
-minsdk: 1.8.1
+minsdk: 3.2.2
