@@ -13,7 +13,6 @@ import org.appcelerator.kroll.KrollFunction;
 import org.appcelerator.kroll.annotations.Kroll;
 import org.appcelerator.titanium.TiContext;
 import org.appcelerator.kroll.common.Log;
-import org.mozilla.javascript.Function;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -62,8 +61,6 @@ public class ParametersDemoProxy extends LifeCycleProxy
 			Log.d(LCAT,prefix + "Date = " + df.format((Date)arg));
 		} else if (arg instanceof KrollFunction) {
 			Log.d(LCAT,prefix + "Callback");
-		} else if (arg instanceof Function) {
-			Log.d(LCAT,prefix + "Function");
 		} else if (arg instanceof Boolean) {
 			Log.d(LCAT,prefix + "Boolean = " + (Boolean)arg);
 		} else {
