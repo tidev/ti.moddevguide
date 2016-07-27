@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2016 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  *
@@ -11,7 +11,6 @@ package ti.moddevguide;
 import org.appcelerator.kroll.KrollDict;
 import org.appcelerator.kroll.KrollFunction;
 import org.appcelerator.kroll.annotations.Kroll;
-import org.appcelerator.titanium.TiContext;
 import org.appcelerator.kroll.common.Log;
 
 import java.text.DateFormat;
@@ -23,15 +22,15 @@ import java.util.TimeZone;
 // The proxy is declared with the @Kroll.proxy annotation
 
 @Kroll.proxy(creatableInModule = ModdevguideModule.class)
-public class ParametersDemoProxy extends LifeCycleProxy 
+public class ParametersDemoProxy extends LifeCycleProxy
 {
 	// Standard Debugging variables
 	private static final String LCAT = "ModdevguideModule";
-	
+
 	public ParametersDemoProxy() {
 		super();
 	}
-	
+
 	private void analyzeArgument(String prefix, Object arg)
 	{
 		if (arg == null) {
@@ -67,9 +66,9 @@ public class ParametersDemoProxy extends LifeCycleProxy
 			Log.d(LCAT,prefix + "Unknown class " + arg.getClass().getSimpleName());
 		}
 	}
-	
+
 	// Public APIs (available in javascript)
-	
+
 	// The methods are exposed to javascript because of the @Kroll.method annotation
 
 	@Kroll.method
@@ -79,13 +78,13 @@ public class ParametersDemoProxy extends LifeCycleProxy
 		// parameters. This is a recursive method that steps into and out of the arguments in order to output
 		// their types. A dot ('.') character is output as a prefix to indicate the depth of the argument
 		// from its parent argument.
-		// 
+		//
 		// This analysis is useful to understand how arguments are passed from JavaScript into your native module.
-		
+
 		String prefix = "[PARAMETERSDEMO] ";
-		
+
 		Log.d(LCAT,prefix + "analyzeParameters called with " + args.length + " arguments");
-		
+
 		for (Object arg : args) {
 			analyzeArgument(prefix, arg);
 		}
