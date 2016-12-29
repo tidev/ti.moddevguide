@@ -13,7 +13,7 @@
 
 @implementation TiModdevguideModule
 
-#pragma mark Internal
+#pragma mark - Internal
 
 // this is generated for your module, please do not change it
 -(id)moduleGUID
@@ -32,7 +32,7 @@ MAKE_SYSTEM_NUMBER(DEMO_INTEGER,NUMINT(50));
 MAKE_SYSTEM_STR(DEMO_STRING,@"Hello World");
 MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 
-#pragma mark Lifecycle
+#pragma mark - Lifecycle
 
 -(void)startup
 {
@@ -171,7 +171,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super didReceiveMemoryWarning:notification];
 }
 
-#pragma Assets Demo Methods
+#pragma mark - Assets Demo Methods
 
 -(NSString*)getPathToModuleAsset:(NSString*) fileName
 {
@@ -193,6 +193,8 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	
 	return result;
 }
+
+#pragma mark API exposed to Javascript
 
 -(TiBlob*)loadImageFromModule:(id)args
 {
