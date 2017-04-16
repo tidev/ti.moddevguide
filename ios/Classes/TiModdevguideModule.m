@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2017 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
@@ -16,13 +16,13 @@
 #pragma mark - Internal
 
 // this is generated for your module, please do not change it
--(id)moduleGUID
+- (id)moduleGUID
 {
 	return @"6fe96416-b375-4358-ab0e-65510cc1acbe";
 }
 
 // this is generated for your module, please do not change it
--(NSString*)moduleId
+- (NSString *)moduleId
 {
 	return @"ti.moddevguide";
 }
@@ -34,7 +34,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 
 #pragma mark - Lifecycle
 
--(void)startup
+- (void)startup
 {
 	// This method is called when the module is first loaded
 	// you *must* call the superclass
@@ -44,7 +44,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	NSLog(@"[MODULE LIFECYCLE EVENT] startup");
 }
 
--(void)shutdown:(id)sender
+- (void)shutdown:(id)sender
 {
 	// This method is called when the module is being unloaded.
 	// Typically this is during application shutdown. Make sure you don't do too
@@ -56,7 +56,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super shutdown:sender];
 }
 
--(id)init
+- (id)init
 {
 	// This is the designated initializer method and will always be called
 	// when the proxy is created.
@@ -66,7 +66,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	return [super init];
 }
 
--(void)_destroy
+- (void)_destroy
 {
 	// This method is called from the dealloc method and is good place to
 	// release any objects and memory that have been allocated for the module.
@@ -76,7 +76,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super _destroy];
 }
 
--(void)dealloc
+- (void)dealloc
 {
 	// This method is called when the proxy is being deallocated. The superclass
 	// method calls the _destroy method.
@@ -86,7 +86,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super dealloc];
 }
 
--(void)suspend:(id)sender
+- (void)suspend:(id)sender
 {
 	// This method is called when the application is being suspended
 	
@@ -95,7 +95,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super suspend:sender];
 }
 
--(void)resume:(id)sender
+- (void)resume:(id)sender
 {
 	// This method is called when the application is being resumed
 	
@@ -104,7 +104,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super resume:sender];
 }
 
--(void)resumed:(id)sender
+- (void)resumed:(id)sender
 {
 	// This method is called when the application has been resumed
 	
@@ -113,7 +113,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super resumed:sender];
 }
 
--(id)_initWithPageContext:(id<TiEvaluator>)context
+- (id)_initWithPageContext:(id<TiEvaluator>)context
 {
 	// This method is one of the initializers for the proxy class. If the
 	// proxy is created without arguments then this initializer will be called.
@@ -125,7 +125,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	return [super _initWithPageContext:context];
 }
 
--(id)_initWithPageContext:(id<TiEvaluator>)context_ args:(NSArray*)args
+- (id)_initWithPageContext:(id<TiEvaluator>)context_ args:(NSArray *)args
 {
 	// This method is one of the initializers for the proxy class. If the
 	// proxy is created with arguments then this initializer will be called.
@@ -137,7 +137,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	return [super _initWithPageContext:context_ args:args];
 }
 
--(void)_configure
+- (void)_configure
 {
 	// This method is called from _initWithPageContext to allow for
 	// custom configuration of the module before startup. The superclass
@@ -148,7 +148,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super _configure];
 }
 
--(void)_initWithProperties:(NSDictionary*)properties
+- (void)_initWithProperties:(NSDictionary *)properties
 {
 	// This method is called from _initWithPageContext if arguments have been
 	// used to create the proxy. It is called after the initializers have completed
@@ -164,7 +164,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 
 #pragma mark Internal Memory Management
 
--(void)didReceiveMemoryWarning:(NSNotification*)notification
+- (void)didReceiveMemoryWarning:(NSNotification*)notification
 {
 	// optionally release any resources that can be dynamically
 	// reloaded once memory is available - such as caches
@@ -173,7 +173,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 
 #pragma mark - Assets Demo Methods
 
--(NSString*)getPathToModuleAsset:(NSString*) fileName
+- (NSString *)getPathToModuleAsset:(NSString *) fileName
 {
 	// The module assets are copied to the application bundle into the folder pattern
 	// "module/<moduleid>". One way to access these assets is to build a path from the
@@ -185,7 +185,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	return result;
 }
 
--(NSString*)getPathToApplicationAsset:(NSString*) fileName
+- (NSString *)getPathToApplicationAsset:(NSString *) fileName
 {
 	// The application assets can be accessed by building a path from the mainBundle of the application.
 	
@@ -196,7 +196,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 
 #pragma mark API exposed to Javascript
 
--(TiBlob*)loadImageFromModule:(id)args
+- (TiBlob*)loadImageFromModule:(id)args
 {
 	ENSURE_SINGLE_ARG(args,NSString);
 	
@@ -217,7 +217,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	return result;	
 }
 
--(TiBlob*)loadImageFromApplication:(id)args
+- (TiBlob*)loadImageFromApplication:(id)args
 {
 	ENSURE_SINGLE_ARG(args,NSString);
 	

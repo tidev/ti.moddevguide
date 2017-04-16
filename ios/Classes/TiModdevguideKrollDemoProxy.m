@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2017 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
@@ -11,7 +11,7 @@
 
 @implementation TiModdevguideKrollDemoProxy
 
--(void)_destroy
+- (void)_destroy
 {	
 	// Make sure to release the callback objects
 	RELEASE_TO_NIL(successCallback);
@@ -23,7 +23,7 @@
 
 #pragma Helper Methods
 
--(void)sendSuccessEvent:(id)message withTitle:(NSString*)title
+- (void)sendSuccessEvent:(id)message withTitle:(NSString *)title
 {
 	if (successCallback != nil){	
 		NSMutableDictionary *event = [NSMutableDictionary dictionary];
@@ -35,7 +35,7 @@
 	}
 }
 
--(void)sendCancelEvent:(id)message withTitle:(NSString*)title
+- (void)sendCancelEvent:(id)message withTitle:(NSString *)title
 {
 	if (cancelCallback != nil){
 		NSMutableDictionary *event = [NSMutableDictionary dictionary];
@@ -51,7 +51,7 @@
 
 // These methods are exposed to javascript because of their method signatures
 
--(void)registerCallbacks:(id)args
+- (void)registerCallbacks:(id)args
 {
 	ENSURE_SINGLE_ARG(args,NSDictionary);
 	
@@ -65,7 +65,7 @@
 	NSLog(@"[KROLLDEMO] Callbacks registered");
 }
 
--(void)requestDataWithCallback:(id)args
+- (void)requestDataWithCallback:(id)args
 {
 	NSLog(@"[KROLLDEMO] requestDataWithCallback called");
 	
@@ -76,7 +76,7 @@
 	NSLog(@"[KROLLDEMO] requestData callback returned %@", result);
 }
 
--(void)signalCallbackWithSuccess:(id)args
+- (void)signalCallbackWithSuccess:(id)args
 {
 	ENSURE_UI_THREAD(signalCallbackWithSuccess,args);
 
@@ -98,7 +98,7 @@
 	NSLog(@"[KROLLDEMO] Event fired");
 }
 
--(void)signalEvent:(id)args
+- (void)signalEvent:(id)args
 {
 	ENSURE_UI_THREAD(signalEvent,args);
 	
@@ -120,7 +120,7 @@
 	}
 }
 
--(void)callThisCallbackDirectly:(id)args
+- (void)callThisCallbackDirectly:(id)args
 {
 	// This macro ensures that there is only one argument and that the argument
 	// is of type NSDictionary. It also has the side-effect of re-assigning the
@@ -148,7 +148,7 @@
 
 #pragma Kroll Property Management
 
--(void)setWatchPropertyChanges:(id)value
+- (void)setWatchPropertyChanges:(id)value
 {
 	// This method is the 'setter' method for the 'watchPropertyChanges' proxy property.
 	// It is called whenever the JavaScript code sets the value of the 'watchPropertyChanges'
@@ -171,7 +171,7 @@
 	[self replaceValue:value forKey:@"watchPropertyChanges" notification:NO];
 }
 
--(void)propertyChanged:(NSString*)key oldValue:(id)oldValue newValue:(id)newValue proxy:(TiProxy*)proxy
+- (void)propertyChanged:(NSString *)key oldValue:(id)oldValue newValue:(id)newValue proxy:(TiProxy *)proxy
 {
 	// If the 'modelDelegate' property has been set for this proxy then this method is called
 	// whenever a proxy property value is updated. Note that this method is called whenever the

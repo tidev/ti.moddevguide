@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2017 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
@@ -11,7 +11,7 @@
 
 @implementation TiModdevguideDemoView
 
--(void)dealloc
+- (void)dealloc
 {
 	NSLog(@"[VIEW LIFECYCLE EVENT] dealloc");
 	
@@ -21,12 +21,12 @@
 	[super dealloc];
 }
 
--(void)willMoveToSuperview:(UIView *)newSuperview
+- (void)willMoveToSuperview:(UIView *)newSuperview
 {
 	NSLog(@"[VIEW LIFECYCLE EVENT] willMoveToSuperview");
 }
 
--(void)initializeState
+- (void)initializeState
 {
 	// This method is called right after allocating the view and
 	// is useful for initializing anything specific to the view
@@ -36,7 +36,7 @@
 	NSLog(@"[VIEW LIFECYCLE EVENT] initializeState");
 }
 
--(void)configurationSet
+- (void)configurationSet
 {
 	// This method is called right after all view properties have
 	// been initialized from the view proxy. If the view is dependent
@@ -48,7 +48,7 @@
 	NSLog(@"[VIEW LIFECYCLE EVENT] configurationSet");
 }
 
--(UIView*)square
+- (UIView*)square
 {
 	// Return the square view. If this is the first time then allocate and
 	// initialize it.
@@ -62,7 +62,7 @@
 	return square;
 }
 
--(void)notifyOfColorChange:(TiColor*)newColor
+- (void)notifyOfColorChange:(TiColor*)newColor
 {
 	NSLog(@"[VIEW LIFECYCLE EVENT] notifyOfColorChange");
 	
@@ -82,7 +82,7 @@
 	}
 }
 
--(void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
+- (void)frameSizeChanged:(CGRect)frame bounds:(CGRect)bounds
 {
 	// You must implement this method for your view to be sized correctly.
 	// This method is called each time the frame / bounds / center changes
@@ -101,7 +101,7 @@
 	}
 }
 
--(void)setColor_:(id)color
+- (void)setColor_:(id)color
 {
 	// This method is a property 'setter' for the 'color' property of the
 	// view. View property methods are named using a special, required
