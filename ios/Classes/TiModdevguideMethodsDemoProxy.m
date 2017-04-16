@@ -1,21 +1,21 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2017 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
 
 #import "TiModdevguideMethodsDemoProxy.h"
 #import "TiUtils.h"
-#import "tiRect.h"
-#import "tiPoint.h"
-#import "tiBlob.h"
+#import "TiRect.h"
+#import "TiPoint.h"
+#import "TiBlob.h"
 
 @implementation TiModdevguideMethodsDemoProxy
 
 // These methods are exposed to javascript because of their method signatures
 
--(void)demoMethodNoReturn:(id)args
+- (void)demoMethodNoReturn:(id)args
 {
 	// This method is an example of exposing a native method to JavaScript. Eventhough
 	// the method signature has an 'args' parameter it is not required to pass
@@ -24,7 +24,7 @@
 	NSLog(@"[METHODSDEMO] demoMethodNoReturn");
 }
 
--(NSNumber*) demoMethodNumberInt:(id)args
+- (NSNumber *)demoMethodNumberInt:(id)args
 {
 	// This method is an example of exposing a native method that accepts 2
 	// integer values as arguments and returns a number.
@@ -49,10 +49,10 @@
 	
 	NSLog(@"[METHODSDEMO] %d = %d * %d", result, original, multiplier);
 
-	return NUMINT(result);
+	return NUMINTEGER(result);
 }
 
--(NSNumber*) demoMethodNumberFloat:(id)args
+- (NSNumber *)demoMethodNumberFloat:(id)args
 {
 	// This method is an example of exposing a native method that accepts 2
 	// floating point values as arguments and returns a number. 
@@ -80,7 +80,7 @@
 	return NUMFLOAT(result);
 }
 
--(NSString*) demoMethodString:(id)args
+- (NSString *)demoMethodString:(id)args
 {
 	// This method is an example of exposing a native method that accepts 3
 	// arguments (2 string values and 1 integer value) and returns a string.
@@ -103,14 +103,14 @@
 	NSString *lastName = [TiUtils stringValue:[args objectAtIndex:kArgLastName]];
 	NSInteger age = [TiUtils intValue:[args objectAtIndex:kArgAge]];
 					 
-	NSString *result = [NSString stringWithFormat:@"User %@ %@ is %d years old", firstName, lastName, age];
+	NSString *result = [NSString stringWithFormat:@"User %@ %@ is %ld years old", firstName, lastName, (long)age];
 	
 	NSLog(@"[METHODSDEMO] %@", result);
 	
 	return result;
 }
 
--(NSDictionary*) demoMethodDictionary:(id)args
+- (NSDictionary *)demoMethodDictionary:(id)args
 {
 	// This method is an example of exposing a native method that accepts an
 	// array of values and returns a dictionary of those values.
@@ -127,7 +127,7 @@
 	
 	NSInteger index = 0;
 	for (id arg in args) {
-		[result setValue:arg forKey:[NSString stringWithFormat:@"Index%d", index++]];
+		[result setValue:arg forKey:[NSString stringWithFormat:@"Index%ld", (long)index++]];
 	}
 	
 	NSLog(@"[METHODSDEMO] %@", result);
@@ -135,7 +135,7 @@
 	return result;
 }
 
--(NSDate*) demoMethodDate:(id)args
+- (NSDate *)demoMethodDate:(id)args
 {
 	// This method is an example of exposing a native method that accepts a dictionary
 	// argument and returns an NSDate object.
@@ -157,7 +157,7 @@
 	[comps setMonth:month];
 	[comps setDay:day];
 	[comps setYear:year];
-	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	NSDate *result = [gregorian dateFromComponents:comps];
 	[comps release];
 	[gregorian release];
@@ -167,8 +167,7 @@
 	return result;
 }
 
-
--(NSArray*) demoMethodArray:(id)args
+- (NSArray *)demoMethodArray:(id)args
 {
 	// This method is an example of exposing a native method that accepts a
 	// dynamic list of arguments and returns an NSArray object.
@@ -188,7 +187,7 @@
 	return result;
 }
 
--(NSNull*) demoMethodNull:(id)args
+- (NSNull *)demoMethodNull:(id)args
 {
 	// This method is an example of exposing a native method that returns an
 	// NSNull object.
@@ -203,7 +202,7 @@
 	return result;
 }
 
--(TiFile*) demoMethodFile:(id)args
+- (TiFile *)demoMethodFile:(id)args
 {
 	// This method is an example of exposing a native method that accepts a
 	// single string argument and returns a TiFile object.
@@ -231,7 +230,7 @@
 	return result;
 }
 
--(TiBlob*) demoMethodBlob:(id)args
+- (TiBlob *)demoMethodBlob:(id)args
 {
 	// This method is an example of exposing a native method that returns a TiBlob
 	// object containing a predefined blob of text.
@@ -250,7 +249,7 @@
 	return result;
 }
 
--(TiRect*) demoMethodRect:(id)args
+- (TiRect*)demoMethodRect:(id)args
 {
 	// This method is an example of exposing a native method that accepts 4
 	// integer values as arguments and returns a TiRect object.
@@ -284,7 +283,7 @@
 	return result;
 }
 
--(TiPoint*) demoMethodPoint:(id)args
+- (TiPoint *)demoMethodPoint:(id)args
 {
 	// This method is an example of exposing a native method that accepts 2
 	// integer values as arguments and returns a TiPoint object.
@@ -313,8 +312,7 @@
 	return result;
 }
 
-
--(NSDictionary*) demoMethodRange:(id)args
+- (NSDictionary *)demoMethodRange:(id)args
 {
 	// This method is an example of exposing a native method that accepts 2
 	// integer values as arguments and returns a TiRange like object.
@@ -338,15 +336,15 @@
 	
 	// TiRange has been removed from the sdk as of version 2.1.0
 	// Instead of using TiRange, this method just returns a TiRange like dictionary.
-	NSDictionary* result = [NSDictionary dictionaryWithObjectsAndKeys:NUMINT(range.location),@"location", 								 
-		NUMINT(range.length),@"length", nil];
+	NSDictionary* result = [NSDictionary dictionaryWithObjectsAndKeys:NUMINTEGER(range.location),@"location",
+    NUMINTEGER(range.length),@"length", nil];
 	
 	NSLog(@"[METHODSDEMO] %@", result);
 	
 	return result;
 }
 
--(TiColor*) demoMethodColor:(id)args
+- (TiColor *)demoMethodColor:(id)args
 {
 	// This method is an example of exposing a native method that accepts a
 	// string containing a color value and returns a TiColor object.
@@ -363,7 +361,7 @@
 	return result;
 }
 
--(NSString*) demoMethodOptionalArgs:(id)args
+- (NSString *)demoMethodOptionalArgs:(id)args
 {
 	// This method is an example of exposing a native method that accepts 1 or 2
 	// arguments (2 string values) and returns a string.

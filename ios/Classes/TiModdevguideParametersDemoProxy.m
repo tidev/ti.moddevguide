@@ -1,6 +1,6 @@
 /**
  * Appcelerator Titanium Mobile
- * Copyright (c) 2009-2012 by Appcelerator, Inc. All Rights Reserved.
+ * Copyright (c) 2009-2017 by Appcelerator, Inc. All Rights Reserved.
  * Licensed under the terms of the Apache Public License
  * Please see the LICENSE included with this distribution for details.
  */
@@ -11,7 +11,7 @@
 
 @implementation TiModdevguideParametersDemoProxy
 
--(id)analyzeParameters:(id)args
+- (id)analyzeParameters:(id)args
 {
 	// This method analyzes the arguments that are passed to it and outputs the types and depth of the
 	// parameters. This is a recursive method that steps into and out of the arguments in order to output
@@ -29,7 +29,7 @@
 	if ([args isKindOfClass:[NSArray class]]) {
 		NSLog(@"%@Array with %d entries", prefix, [args count]);
 		int index = 0;
-		for (id obj in (NSArray*)args) {
+		for (id obj in (NSArray *)args) {
 			NSLog(@"%@Index[%d]", prefix, index++);
 			[self analyzeParameters:obj];
 		}

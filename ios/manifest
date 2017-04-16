@@ -6,9 +6,9 @@ version: 2.2.0
 apiversion: 2
 architectures: armv7 i386 x86_64 arm64
 description: Titanium Module Development Guide
-author: Jeff English & Jon Alter
+author: Jeff English, Jon Alter & Hans Knoechel
 license: Appcelerator Commercial License
-copyright: Copyright (c) 2010-2012 by Appcelerator, Inc.
+copyright: Copyright (c) 2010-2017 by Appcelerator, Inc.
 
 
 # these should not be edited
@@ -16,4 +16,4 @@ name: moddevguide
 moduleid: ti.moddevguide
 guid: 6fe96416-b375-4358-ab0e-65510cc1acbe
 platform: iphone
-minsdk: 3.4.1
+minsdk: 5.5.0.GA
