@@ -31,16 +31,6 @@
 	[super _destroy];
 }
 
-- (void)dealloc
-{
-	// This method is called when the view proxy is being deallocated. The superclass
-	// method calls the _destroy method.
-	
-	NSLog(@"[VIEWPROXY LIFECYCLE EVENT] dealloc");
-	
-	[super dealloc];
-}
-
 - (id)_initWithPageContext:(id<TiEvaluator>)context
 {
 	// This method is one of the initializers for the view proxy class. If the

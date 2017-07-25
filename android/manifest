@@ -7,8 +7,8 @@ apiversion: 3
 architectures: armeabi-v7a x86
 description: Titanium Module Development Guide
 author: Jeff English & Jon Alter
-license: Appcelerator Commercial License
-copyright: Copyright (c) 2010-2017 by Appcelerator, Inc.
+license: Apache 2.0
+copyright: Copyright (c) 2010-present by Appcelerator, Inc.
 
 
 # these should not be edited

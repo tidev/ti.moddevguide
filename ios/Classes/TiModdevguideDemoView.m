@@ -11,16 +11,6 @@
 
 @implementation TiModdevguideDemoView
 
-- (void)dealloc
-{
-	NSLog(@"[VIEW LIFECYCLE EVENT] dealloc");
-	
-	// Release objects and memory allocated by the view
-	RELEASE_TO_NIL(square);
-	
-	[super dealloc];
-}
-
 - (void)willMoveToSuperview:(UIView *)newSuperview
 {
 	NSLog(@"[VIEW LIFECYCLE EVENT] willMoveToSuperview");

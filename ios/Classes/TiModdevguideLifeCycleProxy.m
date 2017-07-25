@@ -37,16 +37,6 @@ static int nextProxyId = 1;
 	[super _destroy];
 }
 
-- (void)dealloc
-{
-	// This method is called when the proxy is being deallocated. The superclass
-	// method calls the _destroy method.
-	
-	NSLog(@"[PROXY LIFECYCLE EVENT] dealloc proxy with id %d", proxyId);
-	
-	[super dealloc];
-}
-
 - (id)_initWithPageContext:(id<TiEvaluator>)context
 {
 	// This method is one of the initializers for the proxy class. If the
