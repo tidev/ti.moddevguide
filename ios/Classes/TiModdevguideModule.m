@@ -76,16 +76,6 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	[super _destroy];
 }
 
-- (void)dealloc
-{
-	// This method is called when the proxy is being deallocated. The superclass
-	// method calls the _destroy method.
-	
-	NSLog(@"[MODULE LIFECYCLE EVENT] dealloc");
-	
-	[super dealloc];
-}
-
 - (void)suspend:(id)sender
 {
 	// This method is called when the application is being suspended
@@ -210,7 +200,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	}
 	
 	// The image must be converted to a TiBlob before returning
-	TiBlob *result = [[[TiBlob alloc] initWithImage:image] autorelease];
+	TiBlob *result = [[TiBlob alloc] initWithImage:image];
 	
 	NSLog(@"[ASSETSDEMO] %@", result);
 	
@@ -231,7 +221,7 @@ MAKE_SYSTEM_PROP(DEMO_BOOLEAN,YES);
 	}
 	
 	// The image must be converted to a TiBlob before returning
-	TiBlob *result = [[[TiBlob alloc] initWithImage:image] autorelease];
+	TiBlob *result = [[TiBlob alloc] initWithImage:image];
 	
 	NSLog(@"[ASSETSDEMO] %@", result);
 	

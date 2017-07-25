@@ -11,16 +11,6 @@
 
 @implementation TiModdevguideKrollDemoProxy
 
-- (void)_destroy
-{	
-	// Make sure to release the callback objects
-	RELEASE_TO_NIL(successCallback);
-	RELEASE_TO_NIL(cancelCallback);
-	RELEASE_TO_NIL(requestDataCallback);
-	
-	[super _destroy];
-}
-
 #pragma Helper Methods
 
 - (void)sendSuccessEvent:(id)message withTitle:(NSString *)title
@@ -58,9 +48,9 @@
 	NSLog(@"[KROLLDEMO] registerCallbacks called");
 	
 	// Save the callback functions and retain them
-	successCallback = [[args objectForKey:@"success"] retain];
-	cancelCallback = [[args objectForKey:@"cancel"] retain];
-	requestDataCallback = [[args objectForKey:@"requestData"] retain];
+	successCallback = [args objectForKey:@"success"];
+	cancelCallback = [args objectForKey:@"cancel"];
+	requestDataCallback = [args objectForKey:@"requestData"];
 	
 	NSLog(@"[KROLLDEMO] Callbacks registered");
 }

@@ -159,8 +159,6 @@
 	[comps setYear:year];
 	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	NSDate *result = [gregorian dateFromComponents:comps];
-	[comps release];
-	[gregorian release];
 	
 	NSLog(@"[METHODSDEMO] %@", result);
 	
@@ -223,7 +221,7 @@
 		path = [url path];
 	}
 	
-	TiFile *result = [[[TiFile alloc] initWithPath:path] autorelease];
+	TiFile *result = [[TiFile alloc] initWithPath:path];
 	
 	NSLog(@"[METHODSDEMO] Path: %@  Size: %d", result.path, result.size);
 	
@@ -242,7 +240,7 @@
 	
 	NSData *data = [NSData dataWithBytes:utfString length:strlen(utfString)];
 	
-	TiBlob *result = [[[TiBlob alloc] initWithData:data mimetype:@"application/octet-stream"] autorelease];
+    TiBlob *result = [[TiBlob alloc] initWithData:data mimetype:@"application/octet-stream"];
 	
 	NSLog(@"[METHODSDEMO] %@", result);
 	
@@ -275,7 +273,7 @@
 	rect.size.width = [TiUtils intValue:[args objectAtIndex:kArgWidth]];
 	rect.size.height = [TiUtils intValue:[args objectAtIndex:kArgHeight]];
 	
-	TiRect *result = [[[TiRect alloc] init] autorelease];
+	TiRect *result = [[TiRect alloc] init];
 	[result setRect:rect];
 	
 	NSLog(@"[METHODSDEMO] %@", result);
@@ -305,7 +303,7 @@
 	point.x = [TiUtils intValue:[args objectAtIndex:kArgX]];
 	point.y = [TiUtils intValue:[args objectAtIndex:kArgY]];
 	
-	TiPoint *result = [[[TiPoint alloc] initWithPoint:point] autorelease];
+	TiPoint *result = [[TiPoint alloc] initWithPoint:point];
 	
 	NSLog(@"[METHODSDEMO] %@", result);
 	
