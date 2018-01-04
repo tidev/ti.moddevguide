@@ -35,7 +35,6 @@ public class ModdevguideModule extends KrollModule
 	@Kroll.constant public static final int DEMO_INTEGER = 50;
 	@Kroll.constant public static final String DEMO_STRING = "Hello World";
 	
-	// [TIMOB-6819] WARNING: ON V8, Boolean constants don't appear to be working yet!
 	@Kroll.constant public static final Boolean DEMO_BOOLEAN = true;
 	
 	// Module initialization
@@ -43,9 +42,7 @@ public class ModdevguideModule extends KrollModule
 	// Use the '@Kroll.onAppCreate' annotation to declare a method to be called
 	// when the application object is created. This is optional and is only 
 	// required if you have any application specific initialization.
-	//
-	// NOTE: This feature is available in Titanium SDK version 1.7.3 and newer
-	
+	//	
 	@Kroll.onAppCreate
 	public static void onAppCreate(TiApplication app) 
 	{
