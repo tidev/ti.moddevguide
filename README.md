@@ -1,7 +1,7 @@
 Titanium Module Developer Guide [![Build Status](https://travis-ci.org/appcelerator-modules/ti.moddevguide.svg)](https://travis-ci.org/appcelerator-modules/ti.moddevguide)
 =======
 
-This is the Module Developer's Guide for Titanium. It can be used by native module developers to understand the basic and
+Updated - This is the Module Developer's Guide for Titanium. It can be used by native module developers to understand the basic and
 advanced concepts to build own native modules for Titanium.
 
 ## Functionality
