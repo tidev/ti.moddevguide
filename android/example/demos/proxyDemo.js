@@ -4,7 +4,7 @@ var devGuide = null;
 var	proxyList = [];
 var proxyCountLbl = null;
 var deleteProxyBtn = null;
-		
+
 function updateProxyCount() {
 	proxyCountLbl.text = 'Proxy Count: ' + proxyList.length;
 	deleteProxyBtn.enabled = proxyList.length > 0;
@@ -20,10 +20,10 @@ function handleCreateProxy(e) {
 
 	updateProxyCount();
 }
-		
+
 function handleDeleteProxy(e) {
 	var proxy = proxyList.pop();
-	
+
 	// Call proxy for any necessary cleanup
 	proxy.close();
 
@@ -52,7 +52,6 @@ exports.create = function(win) {
 		top:10,
 		right:10,
 		left:10,
-		color:'black',
 		width:Ti.UI.SIZE || 'auto',
 		height:Ti.UI.SIZE || 'auto'
 	}));
@@ -63,7 +62,6 @@ exports.create = function(win) {
 		height: Ti.UI.SIZE || 'auto',
 		width: Ti.UI.SIZE || 'auto',
 		textAlign: 'left',
-		color: 'black',
 		font: { fontSize: 12 }
 	});
 

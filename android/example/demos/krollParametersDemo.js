@@ -7,7 +7,7 @@ function handlePickerSelection(e) {
 		switch (e.row.typeid) {
 			case 'select':
 				return;
-			case 'string': 
+			case 'string':
 				parametersDemo.analyzeParameters('Hello World');
 				break;
 			case 'integer':
@@ -43,18 +43,18 @@ function handlePickerSelection(e) {
 				parametersDemo.analyzeParameters('Test', 10, 4.3, { title: 'Hello', subtitle: 'World' }, [ 'a', 3, 2.1 ] );
 				break;
 		}
-		
+
 		alert('Check console output for results of parameter analysis');
 	} catch (e) {
 		alert(e);
-	}		
+	}
 }
 
 // Public implementation details for commonJS module
 
 exports.initialize = function(modDevGuide) {
 	// Create the proxy
-	parametersDemo = modDevGuide.createParametersDemo();	
+	parametersDemo = modDevGuide.createParametersDemo();
 }
 
 exports.cleanup = function() {
@@ -70,11 +70,10 @@ exports.create = function(win) {
 		top:10,
 		right:10,
 		left:10,
-		color:'black',
 		width:Ti.UI.SIZE || 'auto',
 		height:Ti.UI.SIZE || 'auto'
 	}));
-	
+
 	var data = [];
 	data.push(Ti.UI.createPickerRow({title: 'Select a type', typeid: 'select' }));
 	data.push(Ti.UI.createPickerRow({title: 'String', typeid: 'string' }));
@@ -87,7 +86,7 @@ exports.create = function(win) {
 	data.push(Ti.UI.createPickerRow({title: 'Array of Numbers', typeid: 'number_array' }));
 	data.push(Ti.UI.createPickerRow({title: 'Callback', typeid: 'callback' }));
 	data.push(Ti.UI.createPickerRow({title: 'Mixed', typeid: 'mixed' }));
-	
+
 	var picker = Ti.UI.createPicker({
 		top:20,
 		width:300,
@@ -97,6 +96,6 @@ exports.create = function(win) {
 	picker.selectionIndicator = true;
 
 	picker.addEventListener('change', handlePickerSelection);
-	
+
 	win.add(picker);
 }

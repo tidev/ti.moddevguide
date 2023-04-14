@@ -74,7 +74,7 @@ function handlePickerSelection(e) {
 				result = methodsDemo.demoMethodOptionalArgs('Hello', 'World');
 				break;
 		}
-		
+
 		alert('Method returned:\n' + result);
 	} catch (e) {
 		alert(e);
@@ -101,11 +101,10 @@ exports.create = function(win) {
 		top:10,
 		right:10,
 		left:10,
-		color:'black',
 		width:Ti.UI.SIZE || 'auto',
 		height:Ti.UI.SIZE || 'auto'
 	}));
-	
+
 	var data = [];
 	data.push(Ti.UI.createPickerRow({title: 'Select a type', typeid: 'select' }));
 	data.push(Ti.UI.createPickerRow({title: 'No return', typeid: 'noreturn' }));
@@ -123,7 +122,7 @@ exports.create = function(win) {
 	data.push(Ti.UI.createPickerRow({title: 'Blob', typeid: 'blob' }));
 	data.push(Ti.UI.createPickerRow({title: 'Null', typeid: 'null' }));
 	data.push(Ti.UI.createPickerRow({title: 'Optional Args', typeid: 'optional' }));
-		
+
 	var picker = Ti.UI.createPicker({
 		top:20,
 		width:300,
@@ -133,6 +132,6 @@ exports.create = function(win) {
 	picker.selectionIndicator = true;
 
 	picker.addEventListener('change', handlePickerSelection);
-	
+
 	win.add(picker);
 }
