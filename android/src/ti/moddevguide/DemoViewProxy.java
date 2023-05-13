@@ -1,123 +1,116 @@
 /**
-  * Appcelerator Titanium Mobile
-  * Copyright (c) 2009-2017 by Appcelerator, Inc. All Rights Reserved.
-  * Licensed under the terms of the Apache Public License
-  * Please see the LICENSE included with this distribution for details.
-  *
-  */
+ * Appcelerator Titanium Mobile
+ * Copyright (c) 2009-2017 by Appcelerator, Inc. All Rights Reserved.
+ * Licensed under the terms of the Apache Public License
+ * Please see the LICENSE included with this distribution for details.
+ */
 
 package ti.moddevguide;
-
-import org.appcelerator.kroll.KrollDict;
-import org.appcelerator.kroll.KrollModule;
-import org.appcelerator.kroll.annotations.Kroll;
-import org.appcelerator.kroll.common.AsyncResult;
-import org.appcelerator.kroll.common.TiMessenger;
-import org.appcelerator.titanium.TiApplication;
-import org.appcelerator.kroll.common.Log;
-import org.appcelerator.titanium.view.TiUIView;
-import org.appcelerator.titanium.proxy.TiViewProxy;
 
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 
+import org.appcelerator.kroll.KrollDict;
+import org.appcelerator.kroll.KrollModule;
+import org.appcelerator.kroll.annotations.Kroll;
+import org.appcelerator.kroll.common.AsyncResult;
+import org.appcelerator.kroll.common.Log;
+import org.appcelerator.kroll.common.TiMessenger;
+import org.appcelerator.titanium.TiApplication;
+import org.appcelerator.titanium.proxy.TiViewProxy;
+import org.appcelerator.titanium.view.TiUIView;
+
 // The proxy is declared with the @Kroll.proxy annotation
 
 @Kroll.proxy(creatableInModule = ModdevguideModule.class)
-public class DemoViewProxy extends TiViewProxy
-{
-	// Standard Debugging variables
-	private static final String LCAT = "ModdevguideModule";
+public class DemoViewProxy extends TiViewProxy {
+    // Standard Debugging variables
+    private static final String LCAT = "ModdevguideModule";
+    private static final int MSG_SET_COLOR = 70000;
 
-	public DemoViewProxy() {
-		super();
+    public DemoViewProxy() {
+        super();
 
-		Log.d(LCAT, "[VIEWPROXY LIFECYCLE EVENT] init");
-	}
+        Log.d(LCAT, "[VIEWPROXY LIFECYCLE EVENT] init");
+    }
 
-	@Override
-	public TiUIView createView(Activity activity)
-	{
-		// This method is called when the view needs to be created. This is
-		// a required method for a TiViewProxy subclass.
+    @Override
+    public TiUIView createView(Activity activity) {
+        // This method is called when the view needs to be created. This is
+        // a required method for a TiViewProxy subclass.
 
-		DemoView view = new DemoView(this);
-		view.getLayoutParams().autoFillsHeight = true;
-		view.getLayoutParams().autoFillsWidth = true;
+        DemoView view = new DemoView(this);
+        view.getLayoutParams().autoFillsHeight = true;
+        view.getLayoutParams().autoFillsWidth = true;
 
-		return view;
-	}
+        return view;
+    }
 
-	// Handle creation options
-	@Override
-	public void handleCreationDict(KrollDict options)
-	{
-		// This method is called from handleCreationArgs if there is at least
-		// argument specified for the proxy creation call and the first argument
-		// is a KrollDict object.
+    // Handle creation options
+    @Override
+    public void handleCreationDict(KrollDict options) {
+        // This method is called from handleCreationArgs if there is at least
+        // argument specified for the proxy creation call and the first argument
+        // is a KrollDict object.
 
-		Log.d(LCAT, "VIEWPROXY LIFECYCLE EVENT] handleCreationDict " + options);
+        Log.d(LCAT, "VIEWPROXY LIFECYCLE EVENT] handleCreationDict " + options);
 
-		// Calling the superclass method ensures that the properties specified
-		// in the dictionary are properly set on the proxy object.
-		super.handleCreationDict(options);
-	}
+        // Calling the superclass method ensures that the properties specified
+        // in the dictionary are properly set on the proxy object.
+        super.handleCreationDict(options);
+    }
 
-	public void handleCreationArgs(KrollModule createdInModule, Object[] args)
-	{
-		// This method is one of the initializers for the proxy class. The arguments
-		// for the create call are passed as an array of objects. If your proxy
-		// simply needs to handle a single KrollDict argument, use handleCreationDict.
-		// The superclass method calls the handleCreationDict if the first argument
-		// to the create method is a dictionary object.
+    // Proxy properties are forwarded to the view in the propertyChanged
+    // notification. If the property update needs to occur on the UI thread
+    // then create the setProperty method in the proxy and forward to the view.
 
-		Log.d(LCAT, "VIEWPROXY LIFECYCLE EVENT] handleCreationArgs ");
+    public void handleCreationArgs(KrollModule createdInModule, Object[] args) {
+        // This method is one of the initializers for the proxy class. The arguments
+        // for the create call are passed as an array of objects. If your proxy
+        // simply needs to handle a single KrollDict argument, use handleCreationDict.
+        // The superclass method calls the handleCreationDict if the first argument
+        // to the create method is a dictionary object.
 
-		for (int i = 0; i < args.length; i++) {
-			Log.d(LCAT, "VIEWPROXY LIFECYCLE EVENT] args[" + i + "] " + args[i]);
-		}
+        Log.d(LCAT, "VIEWPROXY LIFECYCLE EVENT] handleCreationArgs ");
 
-		super.handleCreationArgs(createdInModule, args);
-	}
+        for (int i = 0; i < args.length; i++) {
+            Log.d(LCAT, "VIEWPROXY LIFECYCLE EVENT] args[" + i + "] " + args[i]);
+        }
 
-	// Proxy properties are forwarded to the view in the propertyChanged
-	// notification. If the property update needs to occur on the UI thread
-	// then create the setProperty method in the proxy and forward to the view.
+        super.handleCreationArgs(createdInModule, args);
+    }
 
-	private static final int MSG_SET_COLOR = 70000;
+    @Kroll.setProperty(retain = false)
+    public void setColor(final String color) {
+        Log.d(LCAT, "[VIEWPROXY LIFECYCLE EVENT] Property Set: setColor");
 
-	@Kroll.setProperty(retain=false)
-	public void setColor(final String color)
-	{
-		Log.d(LCAT,"[VIEWPROXY LIFECYCLE EVENT] Property Set: setColor");
+        // Get the view object from the proxy and set the color
+        if (view != null) {
+            if (!TiApplication.isUIThread()) {
+                TiMessenger.sendBlockingMainMessage(new Handler(TiMessenger.getMainMessenger().getLooper(), new Handler.Callback() {
+                    public boolean handleMessage(Message msg) {
+                        switch (msg.what) {
+                            case MSG_SET_COLOR: {
+                                AsyncResult result = (AsyncResult) msg.obj;
+                                DemoView demoView = (DemoView) view;
+                                demoView.setColor(color);
+                                result.setResult(null);
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                }).obtainMessage(MSG_SET_COLOR), color);
+            } else {
+                DemoView demoView = (DemoView) view;
+                demoView.setColor(color);
+            }
+        }
 
-		// Get the view object from the proxy and set the color
-		if (view != null) {
-			if (!TiApplication.isUIThread()) {
-				TiMessenger.sendBlockingMainMessage(new Handler(TiMessenger.getMainMessenger().getLooper(), new Handler.Callback() {
-					public boolean handleMessage(Message msg) {
-						switch (msg.what) {
-							case MSG_SET_COLOR: {
-								AsyncResult result = (AsyncResult) msg.obj;
-								DemoView demoView = (DemoView)view;
-								demoView.setColor(color);
-								result.setResult(null);
-								return true;
-							}
-						}
-						return false;
-					}
-				}).obtainMessage(MSG_SET_COLOR), color);
-			} else {
-				DemoView demoView = (DemoView)view;
-				demoView.setColor(color);
-			}
-		}
-
-		// Call setPropertyAndFire if you want the property set on the proxy and
-		// to signal the propertyChanged notification
-		setPropertyAndFire("color", color);
-	}
+        // Call setPropertyAndFire if you want the property set on the proxy and
+        // to signal the propertyChanged notification
+        setPropertyAndFire("color", color);
+    }
 
 }

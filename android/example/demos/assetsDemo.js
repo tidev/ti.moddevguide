@@ -6,15 +6,15 @@ var	imageView = null;
 function handleLoadModuleImage(e) {
 	var image = devGuide.loadImageFromModule('module_image.png');
 	if (image != null) {
-		imageView.image = image;		
-	}	
+		imageView.image = image;
+	}
 }
 
 function handleLoadAppImage(e) {
 	var image = devGuide.loadImageFromApplication('application_image.png');
 	if (image != null) {
 		imageView.image = image;
-	}			
+	}
 }
 
 // Public implementation details for commonJS module
@@ -37,7 +37,6 @@ exports.create = function(win) {
 		top:10,
 		right:10,
 		left:10,
-		color:'black',
 		width:Ti.UI.SIZE || 'auto',
 		height:Ti.UI.SIZE || 'auto'
 	}));
@@ -45,17 +44,17 @@ exports.create = function(win) {
 	var moduleImageBtn = Ti.UI.createButton({
 		title: 'Load Module Image',
 		top:10,
-		width:200,
+		width: 250,
 		height:Ti.UI.SIZE || 'auto'
 	});
-	
+
 	var appImageBtn = Ti.UI.createButton({
 		title: 'Load Application Image',
 		top:10,
-		width:200,
+		width: 250,
 		height:Ti.UI.SIZE || 'auto'
 	});
-	
+
 	imageView = Ti.UI.createImageView({
 		top:10,
 		width:150,
@@ -64,7 +63,7 @@ exports.create = function(win) {
 
 	moduleImageBtn.addEventListener('click', handleLoadModuleImage);
 	appImageBtn.addEventListener('click', handleLoadAppImage);
-	
+
 	win.add(moduleImageBtn);
 	win.add(appImageBtn);
 	win.add(imageView);

@@ -12,7 +12,7 @@ exports.initialize = function(modDevGuide) {
 exports.cleanup = function() {
 	devGuide = null;
 }
-		
+
 exports.create = function(win) {
 	win.add(Ti.UI.createLabel({
 		text:'This demonstrates the accessing of constants defined by a module (or proxy)',
@@ -21,7 +21,6 @@ exports.create = function(win) {
 		top:10,
 		right:10,
 		left:10,
-		color:'black',
 		width:Ti.UI.SIZE || 'auto',
 		height:Ti.UI.SIZE || 'auto'
 	}));
@@ -33,7 +32,7 @@ exports.create = function(win) {
 		{ title: 'String: ', value: devGuide.DEMO_STRING },
 		{ title: 'Boolean: ', value: devGuide.DEMO_BOOLEAN }
 	];
-	
+
 	var cnt = constants.length;
 	for (var index = 0; index < cnt; index++) {
 		var view = Ti.UI.createView({
@@ -48,7 +47,6 @@ exports.create = function(win) {
 			text:constants[index].title,
 			textAlign:'left',
 			font:{ fontsize: 12, fontWeight: 'bold' },
-			color:'black',
 			width:Ti.UI.SIZE || 'auto',
 			height:30
 		}));
@@ -57,11 +55,10 @@ exports.create = function(win) {
 			text:constants[index].value,
 			textAlign:'left',
 			font:{ fontsize: 12 },
-			color:'black',
 			width:Ti.UI.SIZE || 'auto',
 			height:30
 		}));
-	
+
 		win.add(view);
 	}
 }
